@@ -1,0 +1,99 @@
+<!DOChtml>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  
+    <style>
+        .box1{
+                margin:20px;
+                padding:20px;
+            }
+    </style>
+
+    
+</head>
+
+<body>
+       <div class="container-fluid">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col">
+                    <div id="btn">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col box1">
+                        <h2 id="odd"></h2>
+                        <h2 id="even"></h2>
+                        <p class="lead" id="prime">
+                        </p>
+                    </div>
+                </div>
+            <!-- <button type="button" id="go" class="btn btn-default">GO</button> -->
+            </div>
+        </div>
+        
+        </div>
+    
+<!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+        $("#btn").css({margin:'2%'});
+        $("#prime").css({marginTop:'2%'});
+        $("#btn").html("<button type='button' id='go' class='btn btn-info'>Click Here</button>");
+        $("#go").bind('click',function () { 
+            $("#odd").show().text("10 Odd Prime Number");
+            $("#even").hide();
+            $("#prime").empty();
+            var i;
+            var j;
+            for (i = 1; i <= 31; i++) {
+                c=0;
+                for (j = 1; j <=i; j++) {
+                    if(i%j==0){
+                        c++;
+                    }    
+                }
+                if (c==2) {
+                    if (i%2!=0) {
+                        $("#prime").append("<span class='lead'>"+i+"</span><br>");    
+                    }
+                }
+            }
+        });
+        $("#go").bind('dblclick',function () { 
+            $("#odd").hide();
+            $("#even").show().text("Even Prime Number is showed in popup");
+            $("#prime").empty();
+            var i;
+            var j;
+            for (i = 1; i <= 31; i++) {
+                c=0;
+                for (j = 1; j <=i; j++) {
+                    if(i%j==0){
+                        c++;
+                    }    
+                }
+                if (c==2) {
+                    if (i%2==0) {
+                        alert(i);
+                        
+                    }
+                }
+            }
+    }); 
+    });
+
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
+</body>
+
+</html>

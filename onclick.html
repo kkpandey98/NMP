@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+    </head>
+    <body>
+        <div>
+            <p>
+                <input type="text" value="Hello" id="txtbox"><br>
+                <label for="" id="lbl">World</label><br>
+                <input type="button" value="go" id="btn1"><br>
+                <hr>
+                <button type="button" id="btn" onclick="myfun1()" ondblclick="myfun2()">final
+                    <!-- <span class="badge" id="count"></span> -->
+                </button>
+            </p>
+        </div>
+        <script>
+            var click = 0;
+            function myfun1() 
+            {
+                click+=1;
+                //document.getElementById("btn").innerHTML= click;
+                if (click == 1) {
+                    document.getElementById("lbl").style.display = "none";
+                    document.getElementById("btn1").style.display = "none";      
+                }
+                if(click == 2){
+                    document.getElementById("lbl").style.display = "none";
+                    document.getElementById("txtbox").style.display = "none";
+                    document.getElementById("btn1").style.display = "block";    
+                }                
+            }
+            function myfun2() 
+            {
+                document.getElementById("lbl").style.display = "block";
+                document.getElementById("txtbox").style.display = "none";
+                document.getElementById("btn1").style.display = "none";
+            }
+        </script>
+    </body>
+</html>

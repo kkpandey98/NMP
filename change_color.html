@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>assignment 1</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+         crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row-md-6">
+                <div class="col-md-6">
+                    <input type="text" id="txtbox"value="Hello" class="form-control col-4">  
+                </div>
+            </div>  
+            <div class="row-md-6">
+                <div class="col-md-6">
+                    <label id="lbl" class="label label-default">World</label>  
+                </div>
+            </div>
+            <div class="row-md-6">
+                <div class="col-md-6">
+                    <input type="button" onclick="myfun()" value="Go" class="btn btn-primary col-4">
+                </div> 
+            </div>            
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
+    crossorigin="anonymous">
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
+crossorigin="anonymous">
+</script>
+    <script>
+        var click=0;
+        function myfun()
+        {
+            click+=1;
+            switch (click) {
+                case 1:
+                    document.getElementById("txtbox").style.color = "Blue";
+                    document.getElementById("lbl").style.color = "Green";
+                    break;
+                case 2:
+                    document.getElementById("txtbox").style.color = "Orange";
+                    document.getElementById("lbl").style.color = "Purple";
+                    break;
+                case 7:
+                    document.getElementById("txtbox").style.color = "Red";
+                    document.getElementById("lbl").style.color = "Yellow";
+                    break;
+                case 13:
+                    document.getElementById("txtbox").style.color = "Magenta";
+                    document.getElementById("lbl").style.color = "DarkBlue";
+                    break;
+            }
+        }
+    </script>
+</html>
